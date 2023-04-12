@@ -1,6 +1,6 @@
 package jp.ssie.ocjp;
 
-public class Test {
+public class Test_0411 {
 	public static void main(String[] args) {
 		
 		int num1 = 100;
