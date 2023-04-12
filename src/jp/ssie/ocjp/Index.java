@@ -1,5 +1,7 @@
 
 /* 
+ * 目次
+ *
  * 2章 Java 基礎
  * 
  * Sample2_1.java ⇒ Hello と出力するだけ
@@ -26,9 +28,10 @@
  * Sample3_6.java ⇒ for文について(繰り返し処理)
  * Sample3_7.java ⇒ while文について(繰り返し処理)
  * Sample3_8.java ⇒ do-while文について(繰り返し処理)
- * Sample3_9.java ⇒ ネストする繰り返し
- * Sample3_10.java ⇒ break文について
- * Sample3_11.java ⇒ continueについて
+ * Sample3_9.java ⇒ ネストする繰り返し(for文の中にfor文を使用すること)
+ * Sample3_10.java ⇒ break文について(ループから抜け出す)
+ * Sample3_11.java ⇒ continue文について(ループから抜け出す)
  * Sample3_12.java ⇒ ラベルについて
  * 
+ * Test_0412.java ⇒ whileとifを使って1～30までの数字(奇数や2と3で割り切れる数字)を表示する
 */
