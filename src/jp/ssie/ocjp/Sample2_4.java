@@ -5,8 +5,8 @@ public class Sample2_4 {
 		int i = 100;
 		byte b = 10;
 		short s = 20;
-		long l = 30L;
-		float f = 1.15f;
+		long l = 30L; //longの場合、代入する数字の末尾にLをつけること
+		float f = 1.15f; //floatの場合も代入する数字の末尾にfをつけること
 		double d = 2.25;
 		char c = 'A';
 		boolean bo = true;
