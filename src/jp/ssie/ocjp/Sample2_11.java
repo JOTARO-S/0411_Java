@@ -46,7 +46,7 @@ public class Sample2_11 {
 		StringBuilder sb3 = new StringBuilder();
 		sb3.append("c:\\test\\a.txt"); // sb3.appendで拡張子を取得したいファイル名を追加する
 		int start = sb3.indexOf("."); //sub3のファイル名から"."を取得する
-		System.out.println(sb3.substring(start + 1));
+		System.out.println(sb3.substring(start + 1)); //
 		
 		
 	}
