@@ -1,6 +1,8 @@
 
 /* 
  * 目次
+ * 
+ * Experiment.java ⇒ メモ、実験用
  *
  * 2章 Java 基礎
  * 
@@ -28,7 +30,7 @@
  * Sample3_6.java ⇒ for文について(繰り返し処理)
  * Sample3_7.java ⇒ while文について(繰り返し処理)
  * Sample3_8.java ⇒ do-while文について(繰り返し処理)
- * Sample3_9.java ⇒ ネストする繰り返し(for文の中にfor文を使用すること)
+ * Sample3_9.java ⇒ ネストする繰り返し(for,while文の中にfor,while文を使用すること)
  * Sample3_10.java ⇒ break文について(ループから抜け出す)
  * Sample3_11.java ⇒ continue文について(ループから抜け出す)
  * Sample3_12.java ⇒ ラベルについて
