@@ -1,41 +1,33 @@
 package jp.ssie.ocjp;
 
-/* 配列
- * for文を用いた配列の初期化
- * 
- * 
- */	
-
-
 public class Test_0414 {
 	public static void main(String[] args) {
-		int[] a = new int[10]; // 配列名 a の宣言をする(int型で10の要素)
-			
-		for (int i = 0; i < a.length; i++) { // for文で i を a.length(今回は要素数が10なので10)回繰り返す 
-			a[i] = (i + 1); 		   // i が 1ずつ増えていくので a[i] = ( i + 1);であれば a[0] = 1, a[1] = 2 ... が繰り返され入力される
-			System.out.print(a[i] + " ");
-		}
+		//呼び出し側
+		String name = "佐藤"; //このように外側で引数が設定されていてもよい
+		show(name); //他のクラスにあるメソッドを呼ぶ場合は参照名を記載する。同一クラスの場合は不要。
 		
-		System.out.println(); //改行
+		System.out.println(max(10,32)); //System.out.println();で定義されているmax()を呼び出す。
+										 //その際、引数が2つ定義されているため2つ必要
 		
-		//while文で表示する方法
-		int j = 0;
-		while(j < a.length) {
-			System.out.print(a[j] + " ");
-			j++;
-		}
-		
-		System.out.println(); //改行
-		
-		int k = 0;
-		int[] b = new int[100];
-		while(k < b.length) {
-			b[k] = (k + 1);
-			k++;
-			if ((k - 1) % 10 == 0) {
-				System.out.println(); //改行
+		for (int x = 0; x < 10;x++) {
+			for(int y = 0; y < 10; y*=2) {
+				System.out.println(max(x,y));
 			}
-			System.out.print(b[k] + " ");
 		}
+		
+		//呼び出す側は実際の値があれば良い為、String nameなどのデータ型などいらない。
+		
+		// System.out.println("end"); // System.out.println("end"); よりも 先に show();が実行される。
+	}
+	
+	//定義側
+	public static void show(String name) {
+		// System.out.println("メソッドテスト");
+		 System.out.println(name + "さん、ようこそ");
+	}
+	
+	public static int max(int num1, int num2) { //2つの引数で構成されたint型のmax(int型のnum1, int型のnum2)を定義する
+		int result = num1 > num2? num1:num2; // int型の result = num1 と num2 の大きいもの
+		return result; //戻り値 result を 呼び出し側に返す
 	}
 }
