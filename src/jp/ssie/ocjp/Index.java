@@ -3,7 +3,9 @@
  * 目次
  * 
  * Experiment.java ⇒ メモ、実験用
- *
+ * 
+ * import java.util.*; ⇒javaのクラスが使える
+ * 
  * 2章 Java 基礎
  * 
  * Sample2_1.java ⇒ Hello と出力するだけ
@@ -36,4 +38,13 @@
  * Sample3_12.java ⇒ ラベルについて
  * 
  * Test_0412.java ⇒ whileとifを使って1～30までの数字(奇数や2と3で割り切れる数字)を表示する
+ * 
+ * 4章 配列
+ * Sample4_1.java ⇒ 配列について
+ * Sample4_2.java ⇒ 多次元配列について
+ * Sample4_3.java ⇒ ArrayList(可変長配列)について
+ * 
+ * 
+ * Test_0414.java ⇒ 繰り返し処理を用いた配列の初期化
+ * 
 */
