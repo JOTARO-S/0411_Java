@@ -8,24 +8,11 @@ import java.util.Random;
  */
 
 public class Experiment {
-	public static void main(String[] args) {
-		for (int i = 0; i <= 6; i++) {
-            for (int j = 0; j <= 6; j++) {
-                if (i == 6 && j == 6) {
-                	System.out.println("i = " + i + " j = " + j + " ゾロ目!! & Finish!!");
-                } else if (i == j) {
-                	System.out.println("i = " + i + " j = " + j + " ゾロ目!!");
-                } else {
-                	System.out.println("i = " + i + " j = " + j);
-                }
-            }
-		}
-		
-		
-				//
-		        Player player = new Player("勇者", 50, 100);
-		        Enemy enemy1 = new Enemy("スライム", 20, 50);
-		        Enemy enemy2 = new Enemy("ドラゴン", 60, 150);
+	public static void main(String[] args) {			
+		//
+	     Player player = new Player("勇者", 50, 100);
+		 Enemy enemy1 = new Enemy("スライム", 20, 50);
+		 Enemy enemy2 = new Enemy("ドラゴン", 60, 150);
 
 		        ArrayList<Character> characters = new ArrayList<>();
 		        characters.add(player);

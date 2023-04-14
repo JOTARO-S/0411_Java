@@ -43,7 +43,7 @@ public class Sample4_3 {
 		
 		System.out.println(); //改行
 		
-		
+		//Sample4_4
 		ArrayList<Integer> num = new ArrayList<Integer>();
 		
 		num.add(10);

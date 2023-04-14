@@ -39,10 +39,14 @@
  * 
  * Test_0412.java ⇒ whileとifを使って1～30までの数字(奇数や2と3で割り切れる数字)を表示する
  * 
+ * 
  * 4章 配列
  * Sample4_1.java ⇒ 配列について
  * Sample4_2.java ⇒ 多次元配列について
  * Sample4_3.java ⇒ ArrayList(可変長配列)について
+ * Sample4_4.java ⇒ Sample4_3.java と同じ
+ * Sample4_5.java ⇒ ArrayListのジェネリックスと拡張for文について
+ * Sample4_6.java ⇒ コマンドライン
  * 
  * 
  * Test_0414.java ⇒ 繰り返し処理を用いた配列の初期化
