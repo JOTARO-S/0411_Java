@@ -52,13 +52,13 @@ package jp.ssie.ocjp;
 
 public class Sample5_1 {
 	public static void main(String[] args) {
-		int x = 20; // x =インスタンス変数
+		//int x = 20; // x =インスタンス変数
 		
-		static int y = 35; // y = static変数
+		//static int y = 35; // y = static変数
 		
-		void method(int z) { // z = ローカル変数
-			int i = 99; 	// i = ローカル変数
-		}
+		//void method(int z) { // z = ローカル変数
+			//int i = 99; 	// i = ローカル変数
+		//}
 		
 
 		
