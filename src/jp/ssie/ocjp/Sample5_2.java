@@ -30,23 +30,23 @@ public class Sample5_2 {
 
 }
 
-class Dog {
-	static int count;
-	String name;
-	String kensyu;
+class Dog { //犬クラス(Dog) を作成 
+	static int count; //犬の数
+	String name; //インスタンス変数の犬の名前を宣言
+	String kensyu; // インスタンス変数の犬の種類を宣言
 	
-	public Dog(String n, String k) {
-		name = n;
-		kensyu = k;
-		count++;
+	public Dog(String n, String k) { //犬クラスのString n と String k を宣言
+		name = n; //インスタンス変数の name に n を代入する
+		kensyu = k; //インスタンス変数の kenshu  k
+		count++; //count を 1 加算する
 	}
 	
 	String getName() {
-		return name;
+		return name; //戻り値で name を 返す
 	}
 	
 	String getKensyu() {
-		return kensyu;
+		return kensyu; //戻り値で kensyu を返す
 	}
 }
 
