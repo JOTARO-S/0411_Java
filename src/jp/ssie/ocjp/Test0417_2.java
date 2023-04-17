@@ -43,15 +43,15 @@ class Employee {
 		
 		//setter
 		
-		public int setId(int id) {
+		public void setId(int id) {
 			this.id = id;
 		}
 		
-		public String setName(String name) {
+		public void setName(String name) {
 			this.name = name;
 		}
 		
-		public int setAge(int age) {
+		public void setAge(int age) {
 			this.age = age;
 		}
 		
@@ -68,8 +68,8 @@ public class Test0417_2 {
 		ArrayList<Employee> employees = new ArrayList<>();
 		
 		Employee emp1 = new Employee(1001,"山田",40);
-		Employee emp2 = new Employee(1001,"田中",35);
-		Employee emp3 = new Employee(1001,"佐藤",23);
+		Employee emp2 = new Employee(1002,"田中",35);
+		Employee emp3 = new Employee(1003,"佐藤",23);
 		
 		employees.add(emp1);
 		employees.add(emp2);
@@ -85,7 +85,8 @@ public class Test0417_2 {
 			e.show();
 		}
 		
-		employees.get(1).setName("山田");
+		employees.get(2).setName("山田");
+		showAll(employees);
 		
 		for(Employee e: employees) {
 			e.show();
@@ -94,10 +95,11 @@ public class Test0417_2 {
 	}
 	
 	public static void showAll(ArrayList<Employee> employees) {
-		for(Employee emp: employees) {
-			emp.show();
-		}
+	    for(Employee emp: employees) {
+	        emp.show();
+	    }
 	}
+
 	
 
 }
