@@ -53,14 +53,14 @@
  * 
  * 5章 クラス定義
  * Sample5_1.java ⇒ 具象クラスと変数(インスタンス変数、static変数(クラス変数)、ローカル変数)について
- * Sample5_2.java ⇒ 
- * Sample5_3.java ⇒ メソッド
- * Sample5_4.java ⇒ 
- * Sample5_5.java ⇒ 
- * Sample5_6.java ⇒ 
- * Sample5_7.java ⇒ 
- * Sample5_8.java ⇒ 
- * Sample5_9.java ⇒ 
+ * Sample5_2.java ⇒ インスタンス変数とstatic変数の例
+ * Sample5_3.java ⇒ メソッドの呼び出し(インスタンスメソッドとstaticメソッド)
+ * Sample5_4.java ⇒ メソッドの呼び出し(インスタンスメソッドとstaticメソッド)
+ * Sample5_5.java ⇒ インスタンス化
+ * Sample5_6.java ⇒ 変数のスコープ
+ * Sample5_7.java ⇒ コンストラクタとデフォルトコンストラクタ
+ * Sample5_8.java ⇒ コンストラクタとデフォルトコンストラクタ
+ * Sample5_9.java ⇒ staticイニシャライザ
  * Sample5_10.java ⇒ 
  * Sample5_11.java ⇒ 
  * Sample5_12.java ⇒ 

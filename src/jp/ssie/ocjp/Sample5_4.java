@@ -52,30 +52,30 @@ package jp.ssie.ocjp;
 
 
 
-class Teacher {
-	String name;
+class MetTest {
+	int test; //インスタンス定数
 	
-	void setName(String x) {
-		name = x;
+	static void metTest1() { //staticメソッドの定義です
+		//test = 10; // staticメソッドの中ではインスタンス定数にはアクセスできないのでエラーとなる(static int test で定義していれば使える)
+		//staticメソッドはデータを利用しないものに利用すると良い
+		System.out.println("staticメソッドが呼ばれました");
 	}
 	
-	String getName() {
-		return name;
+	void metTest2() { //インスタンスメソッドの定義です
+		test = 10;
+		System.out.println("インスタンスメソッドが呼ばれました");
 	}
 }
 
 
-public class Sample5_3 {
+public class Sample5_4 {
 	public static void main(String[] args) {
-		Teacher s1 = new Teacher();
-		s1.setName("佐藤さん");
-		
-		Teacher s2 = new Teacher();
-		s2.setName("田中さん");
-		
-		System.out.println("名前: " + s1.getName());
-		System.out.println("名前: " + s2.getName());
-		
+		MetTest.metTest1(); //クラス名.　Staticメソッド名
+		// MetTest.metTest2(); //staticメソッドでないので不可
+		System.out.println();
+		MetTest mt = new MetTest();
+		mt.metTest1();
+		mt.metTest2();
 		
 	}
 
