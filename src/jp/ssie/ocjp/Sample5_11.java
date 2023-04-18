@@ -57,8 +57,6 @@ public class Sample5_11 {
 		obj.metTest4(sb);
 		System.out.println("String型呼び出し側は" + sb);
 
-		
-		
 	}
 
 }

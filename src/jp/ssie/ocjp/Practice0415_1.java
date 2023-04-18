@@ -13,5 +13,7 @@ public class Practice0415_1 {
 		} else if (num == 0) {
 			System.out.println("その値は0です。");
 		}
+		
+		
 	}
 }

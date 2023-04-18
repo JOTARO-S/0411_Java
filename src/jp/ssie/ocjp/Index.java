@@ -66,8 +66,8 @@
  * Sample5_11.java ⇒ 引数と戻り値での基本データ型と参照型の違い
  * Sample5_12.java ⇒ アクセス制御、アクセス修飾子
  * Sample5_13.java ⇒ パッケージ化
- * Sample5_14.java ⇒ import文
- * Sample5_15.java ⇒ import文
+ * Sample5_14.java ⇒ import文, 異なるパッケージやjavaをインポートする
+ * Sample5_15.java ⇒ import文, 異なるパッケージやjavaをインポートする
  * Sample5_16.java ⇒ Javac コマンドのオプション
  * 
  * Test_0417.java ⇒ クラス（呼び出しと定義）
