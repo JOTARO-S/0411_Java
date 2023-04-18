@@ -26,8 +26,14 @@ class RefTest {
 	}
 	
 	void metTest3(String str) {
-		str += 30; //str型はオブジェクト参照型であるがString型の変数は不変である為、新しいStringオブジェクトを作成している
+		str += 30; //String型はオブジェクト参照型であるがString型の変数は不変である為、新しいStringオブジェクトを作成している
 		System.out.println("String型定義側は" + str); 
+		
+	}
+	
+	void metTest4(StringBuilder sb) {
+		sb.append("eo"); //StringBuilder型はオブジェクト参照型であり、元のオブジェクトの変更が可能である為、呼び出し側も変更されている
+		System.out.println("StringBuilder型定義側は" + sb); 
 		
 	}
 }
@@ -39,6 +45,7 @@ public class Sample5_11 {
 		int num = 20;
 		int[] array = {20, 40};
 		String str = "20";
+		StringBuilder sb = new StringBuilder("aiu");
 		RefTest obj = new RefTest();
 		
 		obj.metTest1(num);
@@ -47,6 +54,8 @@ public class Sample5_11 {
 		System.out.println("配列呼び出し側は" + array[0]);
 		obj.metTest3(str);
 		System.out.println("String型呼び出し側は" + str);
+		obj.metTest4(sb);
+		System.out.println("String型呼び出し側は" + sb);
 
 		
 		
