@@ -74,8 +74,10 @@
  * Test0417_2.java ⇒ クラス（呼び出しと定義）
  * 
  * 
+ * Sample6 は jp.sample6 パッケージ
+ * 
  * 6章 継承、ポリモフィズム
- * Sample6_1.java ⇒ 
+ * Sample6_1.java ⇒ 継承（スーパークラスとサブクラス）
  * Sample6_2.java ⇒ 
  * Sample6_3.java ⇒ 
  * Sample6_4.java ⇒ 

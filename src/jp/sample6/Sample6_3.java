@@ -1,4 +1,4 @@
-package jp.ssie.ocjp;
+package jp.sample6;
 
 /* 
  * 
@@ -9,7 +9,7 @@ package jp.ssie.ocjp;
 
 
 
-public class Sample6_13 {
+public class Sample6_3 {
 	public static void main(String[] args) {
 
 		

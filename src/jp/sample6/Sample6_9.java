@@ -1,4 +1,4 @@
-package jp.ssie.ocjp;
+package jp.sample6;
 
 /* 
  * 

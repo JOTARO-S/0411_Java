@@ -16,6 +16,29 @@ package jp.ssie.ocjp;
  * 	private ⇒ クラス×, メンバ変数〇, メソッド〇, コンストラクタ〇
  * 				同一クラス内からのみアクセス可能
  * 
+ * 
+ *  class Person {
+ *  	private int a; //修飾子は上記項目参照
+ *  	int b;
+ *  	protected int c;
+ *  	public int d;
+ * 	}
+ * 
+ *  void setA(int a) { //static は つけてしまうとエラー
+ *  	
+ *  }
+ *  
+ *  void getA() {
+ *  	
+ *  }
+ * 
+ *  public static void main(String[] args) {
+ *  	Person.a;
+ *  
+ *  }
+ * 
+ * 
+ * 
  */
 
 class WorkAc {
