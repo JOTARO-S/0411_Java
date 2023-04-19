@@ -52,6 +52,22 @@ package jp.sample6;
  * 			interface C extends A, B { } という記述になる
  * 		すると、インターフェースCはインターフェースAとBのメンバ変数やメソッドを扱うことが出来る。
  * 
+ * インターフェースの追加仕様
+ * 	JavaSE7まではインターフェースで宣言できるメソッドは抽象メソッドのみだったが、
+ * 	JavaSE8以降は抽象メソッドの他に具象メソッドとしてデフォルトメソッドとstaticメソッドを定義できる、
+ * 	デフォルトメソッド
+ * 			【アクセス修飾子】 default 戻り値 メソッド名 (引数) { デフォルトメソッドの処理 }　（指定できるアクセス修飾子はpublic のみ）
+ * 				default void method() { } 
+ * 			アクセス修飾子の指定を省略した場合自動的にpublicが付与される。
+ *  
+ * static メソッド
+ * 	構文は通常のstaticメソッド と同様だが、アクセス修飾子については以下のルールがある。
+ * 		public と private のみ指定可能
+ * 		指定していない場合 public が付与される
+ * 		protectedは使用不可 記述するとコンパイルエラーとなる。
+ * 
+ *
+ * 
  */
 
 interface MyInterface { //スーパーインターフェース
@@ -73,10 +89,26 @@ class C implements SubInterface {
 	}
 }
 
+class D implements SubInterface {
+    public void getComment() {
+        System.out.println("スーパーインターフェースを実装する");
+    }
+    public int getSum() {
+        return (a + 10);
+    }
+}
+
+
 public class Sample6_11 {
 	public static void main(String[] args) {
 		C c1 = new C();
 		c1.getComment(); //スーパーインターフェース実装
 		System.out.println(c1.getSum()); //サブインターフェース実装
+		test(new C());
+		test(new D());
 	}
+	public static void test(SubInterface c) {
+	}
+	//public static void test(C c) {}
+	//public static void test(D c) {} 
 }
