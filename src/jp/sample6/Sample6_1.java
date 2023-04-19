@@ -46,17 +46,27 @@ class Animal {
 	}
 }
 
-class Dogs extends Animal {
+class Dogs extends Animal { // class Dogs extends Animal なので Animalのサブクラス Dosg ということになる 
 	Dogs() {
 		System.out.println("犬が登録されました");
 	}
 }
 
+class Cats extends Animal {
+	Cats() {
+		System.out.println("猫が登録されました");
+	}
+}
 
 public class Sample6_1 {
 	public static void main(String[] args) {
 		Dogs d1 = new Dogs();
-		d1.setAnimal("クッキ","わんわん");
+		Cats c1 = new Cats();
+		d1.setAnimal("クッキ","わんわん"); //サブクラスに設定されているのでAnimalのコードも使用できる
+		c1.setAnimal("たま","にゃー");
 		d1.showAnimal();
+		c1.showAnimal();
+		
+		
 	}
 }

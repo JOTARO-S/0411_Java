@@ -77,17 +77,17 @@
  * Sample6 は jp.sample6 パッケージ
  * 
  * 6章 継承、ポリモフィズム
- * Sample6_1.java ⇒ 継承（スーパークラスとサブクラス）
- * Sample6_2.java ⇒ 
- * Sample6_3.java ⇒ 
- * Sample6_4.java ⇒ 
- * Sample6_5.java ⇒ 
- * Sample6_6.java ⇒ 
- * Sample6_7.java ⇒ 
- * Sample6_8.java ⇒ 
- * Sample6_9.java ⇒ 
- * Sample6_10.java ⇒ 
- * Sample6_11.java ⇒ 
+ * Sample6_1.java ⇒ スーパークラスとサブクラス
+ * Sample6_2.java ⇒ オーバーロード
+ * Sample6_3.java ⇒ オーバーロード(詳細はSample6_2.javaに記載)
+ * Sample6_4.java ⇒ オーバーライド
+ * Sample6_5.java ⇒ final修飾子
+ * Sample6_6.java ⇒ superメソッド呼び出し
+ * Sample6_7.java ⇒ superコンストラクタ呼び出し
+ * Sample6_8.java ⇒ this ついて
+ * Sample6_9.java ⇒ this ついて インスタンス変数
+ * Sample6_10.java ⇒ 抽象クラス
+ * Sample6_11.java ⇒ インターフェース
  * Sample6_12.java ⇒ 
  * Sample6_13.java ⇒ 
  * Sample6_14.java ⇒ 
