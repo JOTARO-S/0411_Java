@@ -1,3 +1,4 @@
+package jp.index;
 
 /* 
  * 目次
