@@ -101,8 +101,16 @@ package jp.index;
  * Sample7_1.java ⇒ 標準例外、独自例外クラスの定義、tryブロックとcatchブロック
  * Sample7_2.java ⇒ finallyブロック
  * Sample7_3.java ⇒ 複数のcatchブロック
- * Sample7_4.java ⇒ 
- * Sample7_5.java ⇒ 
+ * Sample7_4.java ⇒ throwsキーワードの使用方法
+ * Sample7_5.java ⇒ ライブラリ利用時の注意、オーバーライドするメソッドでの例外の宣言、例外処理のマルチキャッチ
+ * 
+ * 8章 ラムダ式
+ * Sample8_1.java ⇒ 
+ * Sample8_2.java ⇒ 
+ * Sample8_3.java ⇒
+ * Sample8_4.java ⇒
+ * Sample8_5.java ⇒
+ * Sample8_6.java ⇒
 
  * 
 */
