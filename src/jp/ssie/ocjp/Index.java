@@ -91,12 +91,17 @@
  * Sample6_12.java ⇒ 型変換（基本データ型）暗黙的な型変換
  * Sample6_13.java ⇒ 型変換（基本データ型）明示的な型変換(キャスト)
  * Sample6_14.java ⇒ 型変換（オブジェクト参照型）
- * Sample6_15.java ⇒ 
- * Sample6_16.java ⇒ 
- * Sample6_17.java ⇒ 
- * Sample6_18.java ⇒ 
+ * Sample6_15.java ⇒ 型変換（オブジェクト参照型）
+ * Sample6_16.java ⇒ ラッパークラス
+ * Sample6_17.java ⇒ JavaAPI (Objectクラス、equals()メソッドなど)
+ * Sample6_18.java ⇒ JavaAPI (Mathクラス)
  * 
- * 
- * 
+ * 7章 例外処理
+ * Sample7_1.java ⇒ 標準例外、独自例外クラスの定義、tryブロックとcatchブロック
+ * Sample7_2.java ⇒ finallyブロック
+ * Sample7_3.java ⇒ 複数のcatchブロック
+ * Sample7_4.java ⇒ 
+ * Sample7_5.java ⇒ 
+
  * 
 */
