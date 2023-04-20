@@ -88,9 +88,9 @@
  * Sample6_9.java ⇒ this ついて インスタンス変数
  * Sample6_10.java ⇒ 抽象クラス
  * Sample6_11.java ⇒ インターフェース
- * Sample6_12.java ⇒ 
- * Sample6_13.java ⇒ 
- * Sample6_14.java ⇒ 
+ * Sample6_12.java ⇒ 型変換（基本データ型）暗黙的な型変換
+ * Sample6_13.java ⇒ 型変換（基本データ型）明示的な型変換(キャスト)
+ * Sample6_14.java ⇒ 型変換（オブジェクト参照型）
  * Sample6_15.java ⇒ 
  * Sample6_16.java ⇒ 
  * Sample6_17.java ⇒ 
