@@ -19,6 +19,8 @@ package jp.Test;
 
 //スーパーインターフェース Programming
 
+/*
+
 interface Programming {
 	public void showSkill();
 }
@@ -90,4 +92,6 @@ public class Test_0419 {
 		pro1.showSkill();
 	}
 }
+
+*/
 

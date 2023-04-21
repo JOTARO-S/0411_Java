@@ -7,6 +7,7 @@ package jp.Test;
  * sum は受け取った配列の中身を合計するようにする
  * 
  */
+
 interface MyInt {
 	int sum(int[] array);
 }
@@ -53,4 +54,5 @@ public class Test_0421_2 {
         System.out.println(mi3.sum(arr));
     }
 }
+
 

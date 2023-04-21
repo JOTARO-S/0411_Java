@@ -111,6 +111,12 @@ package jp.index;
  * Sample8_4.java ⇒ 匿名クラス
  * Sample8_5.java ⇒ 関数型インタフェース
  * Sample8_6.java ⇒ ラムダ式の省略記法
+ * 
+ * 9章 Java API(Java.timeパッケージ)
+ * Sample9_1.java ⇒ java.time.LocalDate;
+ * Sample9_2.java ⇒ java.time.LocalTime;
+ * Sample9_3.java ⇒ java.time.LocalDateTime;
+ * 
 
  * 
 */

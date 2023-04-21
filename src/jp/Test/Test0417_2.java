@@ -1,5 +1,4 @@
 package jp.Test;
-import java.util.ArrayList;
 
 /*社員情報を管理するクラス
  * 
@@ -15,6 +14,8 @@ import java.util.ArrayList;
  * 	3人目の名前を変更
  * 	再度全情報を表示
  */
+
+/*
 
 class Employee {
 	int id;
@@ -104,3 +105,4 @@ public class Test0417_2 {
 
 }
 
+*/
