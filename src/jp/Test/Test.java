@@ -1,5 +1,18 @@
 package jp.Test;
 
+import java.util.Arrays;
+
+public class Test {
+    public static void main(String[] args) {
+        String[] words = {"apple", "banana", "orange", "kiwi"};
+        Arrays.sort(words, (a, b) -> a.compareTo(b));
+        for (String word : words) {
+            System.out.println(word);
+        }
+    }
+}
+
+
 /*  問題3-4
  
 public class Test {

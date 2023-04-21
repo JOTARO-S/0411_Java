@@ -105,12 +105,12 @@ package jp.index;
  * Sample7_5.java ⇒ ライブラリ利用時の注意、オーバーライドするメソッドでの例外の宣言、例外処理のマルチキャッチ
  * 
  * 8章 ラムダ式
- * Sample8_1.java ⇒ 
- * Sample8_2.java ⇒ 
- * Sample8_3.java ⇒
- * Sample8_4.java ⇒
- * Sample8_5.java ⇒
- * Sample8_6.java ⇒
+ * Sample8_1.java ⇒ ラムダ式の概要、非staticなネストクラス
+ * Sample8_2.java ⇒ staticなネストクラス
+ * Sample8_3.java ⇒ローカルクラス
+ * Sample8_4.java ⇒ 匿名クラス
+ * Sample8_5.java ⇒ 関数型インタフェース
+ * Sample8_6.java ⇒ ラムダ式の省略記法
 
  * 
 */
