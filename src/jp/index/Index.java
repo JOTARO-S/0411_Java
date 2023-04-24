@@ -123,6 +123,7 @@ package jp.index;
  * 
  * 11章	Javaの入出力管理
  * Sample11_1.java ⇒ Javaにおけるファイル処理、Fileクラス
+ * Sample11_2.java ⇒ ファイルシステムのナビゲーション
  * 
  * 
  * 
