@@ -22,7 +22,7 @@
  * 		int read() throws IOException
  */
 
-package jp.sample11;
+package jp.ssie.ocjp.exam0424;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

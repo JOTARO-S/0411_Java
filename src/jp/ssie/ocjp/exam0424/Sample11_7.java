@@ -63,7 +63,7 @@
  * 
  */
 
-package jp.sample11;
+package jp.ssie.ocjp.exam0424;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -74,11 +74,11 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-class Animal {
+class Animal implements Serializable {
 	Animal() { System.out.println("Animal()"); }
 }
 
-class Dog extends Animal  implements Serializable {
+class Dog extends Animal {
 	Dog() { System.out.println("Dog()"); }
 }
 
@@ -97,12 +97,13 @@ public class Sample11_7 {
 			oos.writeObject(obj);
 			System.out.println("----- シリアライズ完了");
 			
-			fis = new FileInputStream(new File("dog.txt"));
-			//fis = new FileInputStream(new File("person.txt"));
+			//fis = new FileInputStream(new File("dog.txt"));
+			fis = new FileInputStream(new File("person.txt"));
 			ois = new ObjectInputStream(fis);
-			Bulldog readObj = (Bulldog) ois.readObject();
-			//Person person = (Person) ois.readObject();
-			//System.out.println(person.getName());
+			//Bulldog readObj = (Bulldog) ois.readObject();
+			Person person = (Person) ois.readObject();
+			System.out.println(person.getName());
+			System.out.println(person.getAge());
 			System.out.println("----- デシリアライズ完了");
 		} catch(ClassNotFoundException e) {
 			System.err.println("クラスファイルがありません");

@@ -36,7 +36,7 @@
 // DataInputStreamおよびDataOutputStreamの各クラスを使ってファイルの読み取りおよび書き込みを行う方法の例
 // int, double, String の各型の配列にデータを格納し、orders.txtという名前のファイルに書き込まれ、プログラムに再度読み込みをさせ画面に出力させる。
 
-package jp.sample11;
+package jp.ssie.ocjp.exam0424;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

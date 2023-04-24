@@ -62,7 +62,7 @@
  * 
  */
 
-package jp.sample11;
+package jp.ssie.ocjp.exam0424;
 
 import java.io.File;
 import java.io.FileNotFoundException;

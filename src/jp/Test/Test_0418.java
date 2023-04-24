@@ -1,5 +1,6 @@
 package jp.Test;
-import java.util.ArrayList;
+
+/*
 
 class Item {
 	int id;
@@ -84,3 +85,4 @@ public class Test_0418 {
 	}
 }
 
+*/
