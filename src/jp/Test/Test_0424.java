@@ -18,12 +18,11 @@
 package jp.Test;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 
@@ -62,22 +61,12 @@ public class Test_0424 {
 	public static void main(String[] args) {	
 		File inputFile = null;
 		BufferedReader in = null;
-		File outputFile = null;
-		BufferedWriter out = null;
 		
 		ArrayList<Item> list = new ArrayList<>();
 		
 		try {
 			inputFile = new File("item.txt");
-			in = new BufferedReader(new FileReader(inputFile));
-			outputFile = new File("item_copy.txt");
-			out = new BufferedWriter (new FileWriter(outputFile));
-			
-			if(!inputFile.exists()) {
-				System.out.println("ファイルが存在しません");
-				return;
-			}
-			
+			in = new BufferedReader(new InputStreamReader(new FileInputStream(inputFile), "Shift-JIS"));
 			String line;
 			while((line = in.readLine()) != null) {
 				Item item = new Item();
@@ -86,9 +75,9 @@ public class Test_0424 {
 				item.setName(str[1]);
 				item.setPrice(Integer.parseInt(str[2]));
 				list.add(item);
-				out.write(Integer.parseInt(str[0]));
-				out.write(Integer.parseInt(str[1]));
-				out.write(Integer.parseInt(str[2]));
+			}
+			for(Item i : list) {
+				System.out.println((i.getId()) + ", " + (i.getName()) + ", " + (i.getPrice()));
 			}
 			
 		} catch(FileNotFoundException e) {
@@ -99,9 +88,6 @@ public class Test_0424 {
 			try {
 				if (in != null) {
 					in.close();
-				}
-				if (out != null) {
-					out.close();
 				}
 			} catch(IOException e) {
 				System.out.println("close fail");
