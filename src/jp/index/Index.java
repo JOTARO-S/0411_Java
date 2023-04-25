@@ -132,10 +132,10 @@ package jp.index;
  * Sample11_8.java ⇒ コンソール
  * Sample11_9.java ⇒ コンソール
  * 
- * 12章 コレクション、ジェネリックス
+ * 12章 コレクションとジェネリックス
  * Sample11_1.java ⇒ Objectクラス、equal()メソッド
- * Sample11_2.java ⇒ 
- * Sample11_3.java ⇒ 
+ * Sample11_2.java ⇒ コレクション
+ * Sample11_3.java ⇒ ジェネリックス
  * Sample11_4.java ⇒ 
  * Sample11_5.java ⇒ 
  * Sample11_6.java ⇒ 

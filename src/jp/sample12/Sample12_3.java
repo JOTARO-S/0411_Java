@@ -2,7 +2,8 @@
 /*
  * Java(応用編)
  * 
- * 
+ * 	ジェネリックス
+ * 		
  */
 
 package jp.sample12;
