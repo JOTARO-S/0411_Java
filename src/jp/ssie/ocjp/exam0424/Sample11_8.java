@@ -20,9 +20,9 @@
  * 
  */
 
-package jp.sample11;
+package jp.ssie.ocjp.exam0424;
 
-public class Sample11_9 {
+public class Sample11_8 {
 	public static void main(String[] args) {
 
 		
