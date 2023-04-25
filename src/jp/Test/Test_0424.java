@@ -52,9 +52,6 @@ class Item {
 	int getPrice() {
 		return price;
 	}
-	void show() {
-		System.out.println("ID: " + id + " 商品名: " + name + " 価格: " + price);
-	}
 }
 
 public class Test_0424 {
