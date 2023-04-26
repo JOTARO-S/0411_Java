@@ -486,4 +486,8 @@ CREATE TABLE store (
 	price INT
 	);
 	
+	-----------------------------------------
+	
+	SELECT a.athlete_id, a.name1, a.name2, e.name FROM athletes a LEFT JOIN events e ON a.event_id = e.event_id;
+	
 
