@@ -147,7 +147,7 @@ package jp.index;
  * Sample11_12.java ⇒ Comparableインターフェース と Comparatorインターフェース
  * Sample11_13.java ⇒ boxingとunboxing、autoboxing
  * Sample11_14.java ⇒ boxingとunboxing、autoboxing
- * Sample11_15.java ⇒ 
+ * Sample11_15.java ⇒ boxingとunboxing、autoboxing
  * Sample11_16.java ⇒ 
  * Sample11_17.java ⇒ 
  * Sample11_18.java ⇒ 
