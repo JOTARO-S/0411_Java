@@ -136,17 +136,17 @@ package jp.index;
  * Sample11_1.java ⇒ Objectクラス、equal()メソッド
  * Sample11_2.java ⇒ コレクション
  * Sample11_3.java ⇒ ジェネリックス
- * Sample11_4.java ⇒ 
- * Sample11_5.java ⇒ 
- * Sample11_6.java ⇒ 
- * Sample11_7.java ⇒ 
- * Sample11_8.java ⇒ 
- * Sample11_9.java ⇒ 
- * Sample11_10.java ⇒ 
- * Sample11_11.java ⇒ 
- * Sample11_12.java ⇒ 
- * Sample11_13.java ⇒ 
- * Sample11_14.java ⇒ 
+ * Sample11_4.java ⇒ ジェネリックプログラミング
+ * Sample11_5.java ⇒ ジェネリックプログラミング
+ * Sample11_6.java ⇒ ジェネリックプログラミング
+ * Sample11_7.java ⇒ ジェネリックプログラミング
+ * Sample11_8.java ⇒ 継承を使用したジェネリックス
+ * Sample11_9.java ⇒ オブジェクトの順序付け
+ * Sample11_10.java ⇒ オブジェクトの順序付け(PriorityQueueクラス)
+ * Sample11_11.java ⇒ Comparableインターフェース と Comparatorインターフェース
+ * Sample11_12.java ⇒ Comparableインターフェース と Comparatorインターフェース
+ * Sample11_13.java ⇒ boxingとunboxing、autoboxing
+ * Sample11_14.java ⇒ boxingとunboxing、autoboxing
  * Sample11_15.java ⇒ 
  * Sample11_16.java ⇒ 
  * Sample11_17.java ⇒ 
