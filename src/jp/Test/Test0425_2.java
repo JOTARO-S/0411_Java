@@ -43,21 +43,33 @@ public class Test0425_2 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		HashMap<Integer, Shop> shopList = new HashMap<>();
-		System.out.println("データを入力してください: 0で終了");
+		int choice = 1;
+		
 		
 		while (true) {
-			if (scanner.nextInt() == 0) break;
+			System.out.println("データを入力してください: 0で終了");
+			try {
+				choice = scanner.nextInt();
+			} catch (Exception e) {
+				System.out.println("半角数字を入力してください");
+	            scanner.next(); // 入力ストリームをクリア
+	            continue;
+			}
+			if (choice == 0) {
+				break;
+			} else {
+				System.out.println("");
+			}
+			System.out.println("IDを入力してください");
+			int id = scanner.nextInt();
 				
-				System.out.println("IDを入力してください");
-				int id = scanner.nextInt();
-				
-				System.out.println("店名を入力してください");
-				String name = scanner.next();
+			System.out.println("店名を入力してください");
+			String name = scanner.next();
 			
-				System.out.println("住所を入力してください");
-				String address = scanner.next();
+			System.out.println("住所を入力してください");
+			String address = scanner.next();
 
-				shopList.put(id, new Shop(id, name, address));
+			shopList.put(id, new Shop(id, name, address));
 			}
 			
 			for (Shop shop : shopList.values()) {
