@@ -154,9 +154,9 @@ package jp.index;
  * Sample11_19.java ⇒ Stream API(ラムダ式)
  * 
  * 13章 Javaとデータベースの連携
- * Jdbc.Sample1.java ⇒
- * Jdbc.Sample2.java ⇒
- * Jdbc.Sample3.java ⇒
- * Jdbc.Sample4.java ⇒
+ * Jdbc.Sample1.java ⇒ getConnection
+ * Jdbc.Sample2.java ⇒ executeQuery(SELECT)
+ * Jdbc.Sample3.java ⇒ executeUpdate(INSERT, UPDATE, DELETE)
+ * Jdbc.Sample4.java ⇒ PreparedStatement
  * 
  **/
