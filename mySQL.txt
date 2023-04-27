@@ -71,6 +71,8 @@ INSERT INTO places(place_name) VALUES
 
 INSERT INTO members(place_id) VALUES
 
+
+
 データベースからデータを取り出す（検索機能）
 SELECT * FROM members; (*はすべてのフィールドを指定、すべて取り出す)
 SELECT name FROM members; (nameを指定、nameのみ取り出す)
