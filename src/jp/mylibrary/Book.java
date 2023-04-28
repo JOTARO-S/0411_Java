@@ -67,7 +67,8 @@ package jp.mylibrary;
 	void setNdc(String ndc) {
 		this.ndc = ndc;
 	}
-	
-	
+	void getBookDataAll() {
+		System.out.printf("ID: %s, タイトル: %s, 著者: %s, ISDN: %s, NDC: %s%n",id,title,author,isbn,ndc);
+	}
 
 }

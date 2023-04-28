@@ -2,6 +2,7 @@ package jp.mylibrary;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 class MainControl {
@@ -44,15 +45,38 @@ class MainControl {
 	            	break;
 	            case 5: 
 	            	List <Book> bookList = dbo.SearchTitle();
+	            	System.out.println("検索結果:");
 	            	for(Book book : bookList) {
-	            		System.out.printf("%s %s %s %s %s",book.getId(),book.getTitle(),book.getAuthor(),book.getIsbn(),book.getNdc());
+	            		book.getBookDataAll();
 	            	}
+	            	System.out.println();
 	            	break;
 	            case 6:
-	            	//List <Book> bookList = dbo.SearchAuthor();
+	            	List <Book> auchorList = dbo.SearchAuthor();
+	            	System.out.println("検索結果:");
+	            	for(Book book : auchorList) {
+	            		book.getBookDataAll();
+	            	}
+	            	System.out.println();
 	            	break;
 	            case 7:
-	            	//dbo.Search
+	            	Map<String, Object> overdueBookList = dbo.OverdueBooks();
+	            	
+	            	//int id = Integer.parseInt(overdueBookList.get("id").toString());
+	            	System.out.println("検索結果:");
+	            	for (String key : overdueBookList.keySet()) {
+	            	    Map<String, Object> bookInfo = (Map<String, Object>)overdueBookList.get(key);
+	            	    Book book = (Book)bookInfo.get("book");
+	            	    User user = (User)bookInfo.get("user");
+	            	    Lending lending = (Lending)bookInfo.get("lending");
+	            	    System.out.printf(
+	            	        "貸出期限: %s, ID: %s, タイトル: %s, 著者: %s%n"
+	            	        + "利用者名: %s, 電話番号: %s, 住所: %s%n",
+	            	        lending.getUntilReturn(), book.getId(), book.getTitle(), book.getAuthor(),
+	            	        user.getName(), user.getPhonenumber(), user.getAddress());
+	            	}
+	            	
+	            	System.out.println();
 	            	break;
 	            case 9:
 	            	System.out.println("終了します。");

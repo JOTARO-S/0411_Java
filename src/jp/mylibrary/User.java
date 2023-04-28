@@ -4,13 +4,18 @@ class User {
 	private int id;
 	private String name;
 	private String phonenumber;
-	private String addres;
+	private String address;
 	
-	User(int id, String name, String phonenumber, String addres) {
+	User(int id, String name, String phonenumber, String address) {
 		this.id = id;
 		this.name = name;
 		this.phonenumber = phonenumber;
-		this.addres = addres;
+		this.address = address;
+	}
+	User(String name, String phonenumber, String address) {
+		this.name = name;
+		this.phonenumber = phonenumber;
+		this.address = address;
 	}
 	User() {
 		
@@ -40,11 +45,12 @@ class User {
 		this.phonenumber = phonenumber;
 	}
 
-	public String getAddres() {
-		return addres;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setAddres(String addres) {
-		this.addres = addres;
+	public void setAddress(String address) {
+		this.address = address;
 	}
+	
 }

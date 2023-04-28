@@ -22,9 +22,12 @@ class Lending {
 		this.user_id = user_id;
 		this.untilReturn = untilReturn;
 	}
+	Lending(Date untilReturn) {
+		this.untilReturn = untilReturn;
+	}
 	
-	Lending() {
-		
+	Lending(int book_id) {
+		this.book_id = book_id;
 	}
 
 	int getBook_id() {
@@ -50,5 +53,4 @@ class Lending {
 	void setUntilReturn(Date untilReturn) {
 		this.untilReturn = untilReturn;
 	}
-
 }
