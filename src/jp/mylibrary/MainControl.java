@@ -44,18 +44,20 @@ class MainControl {
 	            	dbo.NewRegistrationUser();
 	            	break;
 	            case 5: 
-	            	List <Book> bookList = dbo.SearchTitle();
+	            	List <Library> list = dbo.SearchTitle();
 	            	System.out.println("検索結果:");
-	            	for(Book book : bookList) {
-	            		book.getBookDataAll();
+	            	for(Library  data: list) {
+	            		data.getBook().getBookDataAll();
+	            		data.getLending().lendingStatus();
 	            	}
 	            	System.out.println();
 	            	break;
 	            case 6:
-	            	List <Book> auchorList = dbo.SearchAuthor();
+	            	List <Library> list2 = dbo.SearchAuthor();
 	            	System.out.println("検索結果:");
-	            	for(Book book : auchorList) {
-	            		book.getBookDataAll();
+	            	for(Library  data: list2) {
+	            		data.getBook().getBookDataAll();
+	            		data.getLending().lendingStatus();
 	            	}
 	            	System.out.println();
 	            	break;

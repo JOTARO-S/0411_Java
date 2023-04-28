@@ -10,7 +10,6 @@ import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -20,9 +19,9 @@ interface DbInterface {
 	void ReturnBook();
 	void NewRegistrationBook();
 	void NewRegistrationUser();
-	List<Book> SearchTitle();
-	List<Book> SearchAuthor();
-	Map<String, Object> OverdueBooks();	
+	ArrayList<Library> SearchTitle();
+	ArrayList<Library> SearchAuthor();
+	ArrayList<Library> OverdueBooks();	
 }
 
 public class DbOperation implements DbInterface {
@@ -269,14 +268,14 @@ public class DbOperation implements DbInterface {
 	}
 	//図書のタイトル検索
 	 @Override
-	 public List<Book> SearchTitle() {
+	 public ArrayList<Library> SearchTitle() {
 			Connection conn = null;
 			Statement stmt = null;
 			ResultSet rs = null;
 			PreparedStatement ps = null;
 			Scanner scanner = new Scanner(System.in);
 			StringBuilder sql = new StringBuilder();
-			ArrayList<Book> bookList = new ArrayList<>();
+			ArrayList<Library> list = new ArrayList<>();
 			
 			try {
 				sql.append("SELECT * FROM managebook m LEFT JOIN managelending l ON m.id = l.book_id WHERE title LIKE ?"); //SQL文
@@ -288,35 +287,40 @@ public class DbOperation implements DbInterface {
 				ps = conn.prepareStatement(sql.toString());
 				
 				System.out.println("本のタイトル");
-				String book = scanner.next();
+				String bookTitle = scanner.next();
 				
 				System.out.println("部分検索で検索しますか？ 1,yes(y)");
 				String x = scanner.next();
 				switch (x) {
 	            case "1": 
-	            	ps.setString(1,"%" + book + "%");
+	            	ps.setString(1,"%" + bookTitle + "%");
 	            	break;
 	            case "y": 
-	            	ps.setString(1,"%" + book + "%");
+	            	ps.setString(1,"%" + bookTitle + "%");
 	            	break;
 	            case "yes": 
-	            	ps.setString(1,"%" + book + "%");
+	            	ps.setString(1,"%" + bookTitle + "%");
 	            	break;
 				default:
-					ps.setString(1, book);
+					ps.setString(1, bookTitle);
 				}
 				
 
 				rs = ps.executeQuery();
-				while(rs.next()) { //データベースに保存されているデータの数だけ繰り返す
-					int id = rs.getInt("id"); //データベースからデータを１つずつ取得する
-					String title = rs.getString("title");
-					String author = rs.getString("author");
-					String isbn = rs.getString("isbn");
-					String ndc = rs.getString("ndc");
+				while(rs.next()) { //データベースに保存されているデータの数だけ繰り返す				
+					Book book = new Book();
+					Lending len = new Lending();
+					Library library = new Library();
+					book.setId(rs.getInt("id"));
+					book.setTitle(rs.getString("title"));
+					book.setAuthor(rs.getString("author"));
+					book.setIsbn(rs.getString("isbn"));
+					book.setNdc(rs.getString("ndc"));
+					len.setBook_id(rs.getInt("book_id"));
 					
-					Book list = new Book(id, title, author, isbn, ndc); //取得したデータを 新しくAthleteData で作成する
-					bookList.add(list); //ArrayList<AthleteData> list に 取得したデータを追加する
+					library.setBook(book);
+					library.setLending(len);
+					list.add(library);
 				}
 				
 			} catch(SQLException e) {
@@ -344,19 +348,19 @@ public class DbOperation implements DbInterface {
 				}
 				if (sql != null) { sql.delete(0, sql.length());}
 			}
-			return bookList;
+			return list;
 		}
 	 
 	 	//図書の著者検索
 	 	@Override
-		 public List<Book> SearchAuthor() {
+		 public ArrayList<Library> SearchAuthor() {
 				Connection conn = null;
 				Statement stmt = null;
 				ResultSet rs = null;
 				PreparedStatement ps = null;
 				Scanner scanner = new Scanner(System.in);
 				StringBuilder sql = new StringBuilder();
-				ArrayList<Book> bookList = new ArrayList<>();
+				ArrayList<Library> list = new ArrayList<>();
 				
 				try {
 					sql.append("SELECT * FROM managebook m LEFT JOIN managelending l ON m.id = l.book_id WHERE author LIKE ?"); //SQL文
@@ -368,35 +372,40 @@ public class DbOperation implements DbInterface {
 					ps = conn.prepareStatement(sql.toString());
 					
 					System.out.println("著者の名前");
-					String book = scanner.next();
+					String bookAuchor = scanner.next();
 					
 					
 					System.out.println("部分検索で検索しますか？ 1,yes(y)");
 					String x = scanner.next();
 					switch (x) {
 		            case "1": 
-		            	ps.setString(1,"%" + book + "%");
+		            	ps.setString(1,"%" + bookAuchor + "%");
 		            	break;
 		            case "y": 
-		            	ps.setString(1,"%" + book + "%");
+		            	ps.setString(1,"%" + bookAuchor + "%");
 		            	break;
 		            case "yes": 
-		            	ps.setString(1,"%" + book + "%");
+		            	ps.setString(1,"%" + bookAuchor + "%");
 		            	break;
 					default:
-						ps.setString(1, book);
+						ps.setString(1, bookAuchor);
 					}
 
 					rs = ps.executeQuery();
-					while(rs.next()) { //データベースに保存されているデータの数だけ繰り返す
-						int id = rs.getInt("id"); //データベースからデータを１つずつ取得する
-						String title = rs.getString("title");
-						String author = rs.getString("author");
-						String isbn = rs.getString("isbn");
-						String ndc = rs.getString("ndc");
+					while(rs.next()) { //データベースに保存されているデータの数だけ繰り返す				
+						Book book = new Book();
+						Lending len = new Lending();
+						Library library = new Library();
+						book.setId(rs.getInt("id"));
+						book.setTitle(rs.getString("title"));
+						book.setAuthor(rs.getString("author"));
+						book.setIsbn(rs.getString("isbn"));
+						book.setNdc(rs.getString("ndc"));
+						len.setBook_id(rs.getInt("book_id"));
 						
-						Book list = new Book(id, title, author, isbn, ndc); //取得したデータを 新しくAthleteData で作成する
-						bookList.add(list); //ArrayList<AthleteData> list に 取得したデータを追加する
+						library.setBook(book);
+						library.setLending(len);
+						list.add(library);
 					}
 					
 				} catch(SQLException e) {
@@ -424,7 +433,7 @@ public class DbOperation implements DbInterface {
 					}
 					if (sql != null) { sql.delete(0, sql.length());}
 				}
-				return bookList;
+				return list;
 			}
 		 
 		//貸出期限超過の図書一覧

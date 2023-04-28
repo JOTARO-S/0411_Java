@@ -25,9 +25,11 @@ class Lending {
 	Lending(Date untilReturn) {
 		this.untilReturn = untilReturn;
 	}
-	
 	Lending(int book_id) {
 		this.book_id = book_id;
+	}
+	Lending() {
+		
 	}
 
 	int getBook_id() {
@@ -52,5 +54,12 @@ class Lending {
 
 	void setUntilReturn(Date untilReturn) {
 		this.untilReturn = untilReturn;
+	}
+	void lendingStatus() {
+		if(book_id != 0) {
+			System.out.printf("貸出中%n");
+		} else {
+			System.out.printf("在庫あり%n");
+		}
 	}
 }

@@ -14,6 +14,9 @@ package jp.mylibrary;
 		this.isbn = isbn;
 		this.ndc = ndc;
 	}
+	Book() {
+		
+	}
 	Book(int id, String title, String author) {
 		this.id = id;
 		this.title = title;
@@ -68,7 +71,7 @@ package jp.mylibrary;
 		this.ndc = ndc;
 	}
 	void getBookDataAll() {
-		System.out.printf("ID: %s, タイトル: %s, 著者: %s, ISDN: %s, NDC: %s%n",id,title,author,isbn,ndc);
+		System.out.printf("ID: %s, タイトル: %s, 著者: %s, ISDN: %s, NDC: %s ",id,title,author,isbn,ndc);
 	}
 
 }
