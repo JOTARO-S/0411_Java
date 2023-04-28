@@ -1,7 +1,6 @@
 package jp.mylibrary;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,8 +8,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 interface DbInterface {
@@ -438,17 +435,14 @@ public class DbOperation implements DbInterface {
 		 
 		//貸出期限超過の図書一覧
 	 	@Override
-		 public Map<String, Object> OverdueBooks() {
+		 public ArrayList<Library> OverdueBooks() {
 				Connection conn = null;
 				Statement stmt = null;
 				ResultSet rs = null;
 				PreparedStatement ps = null;
 				Scanner scanner = new Scanner(System.in);
 				StringBuilder sql = new StringBuilder();
-				Map<String, Object> overdueBookList = new HashMap<String, Object>();
-				ArrayList<Book> bookList = new ArrayList<>();
-				ArrayList<User> userList = new ArrayList<>();
-				ArrayList<Lending> lenList = new ArrayList<>();
+				ArrayList<Library> list = new ArrayList<>();
 				
 				try {
 					sql.append("SELECT b.id, b.title, b.author, lu.untilReturn, lu.name, lu.phonenumber, lu.address ");
@@ -464,24 +458,23 @@ public class DbOperation implements DbInterface {
 					stmt = conn.createStatement();
 
 					rs = stmt.executeQuery(sql.toString());
-					while(rs.next()) { //データベースに保存されているデータの数だけ繰り返す
-						int id = rs.getInt("id"); //データベースからデータを１つずつ取得する
-						String title = rs.getString("title");
-						String author = rs.getString("author");
-						Date untilReturn = rs.getDate("untilReturn");
-						String name = rs.getString("name");
-						String phonenumber = rs.getString("phonenumber");
-						String address = rs.getString("address");
+					while(rs.next()) { //データベースに保存されているデータの数だけ繰り返す				
+						Book book = new Book();
+						Lending len = new Lending();
+						User user = new User();
+						Library library = new Library();
+						book.setId(rs.getInt("id"));
+						book.setTitle(rs.getString("title"));
+						book.setAuthor(rs.getString("author"));
+						user.setName(rs.getString("name"));
+						user.setPhonenumber("phonenumber");
+						user.setAddress(rs.getString("address"));
+						len.setUntilReturn("untilReturn");
 						
-						Book list1 = new Book(id, title, author); //取得したデータを 新しくAthleteData で作成する
-						bookList.add(list1); //ArrayList<AthleteData> list に 取得したデータを追加する
-						User list2 = new User(name, phonenumber, address);
-						userList.add(list2);
-						Lending list3 = new Lending(untilReturn);
-						lenList.add(list3);
-						overdueBookList.put("Book",list1);
-						overdueBookList.put("User",list2);
-						overdueBookList.put("Lending",list3);
+						library.setBook(book);
+						library.setUser(user);
+						library.setLending(len);
+						list.add(library);
 					}
 					
 				} catch(SQLException e) {
@@ -509,7 +502,7 @@ public class DbOperation implements DbInterface {
 					}
 					if (sql != null) { sql.delete(0, sql.length());}
 				}
-				return overdueBookList;
+				return list;
 			}
 	
 }
