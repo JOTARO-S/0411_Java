@@ -468,7 +468,7 @@ public class DbOperation implements DbInterface {
 						book.setTitle(rs.getString("title"));
 						book.setAuthor(rs.getString("author"));
 						user.setName(rs.getString("name"));
-						user.setPhonenumber("phonenumber");
+						user.setPhonenumber(rs.getString("phonenumber"));
 						user.setAddress(rs.getString("address"));
 						Date date = Date.valueOf(rs.getString("untilReturn"));
 						len.setUntilReturn(date);
@@ -477,6 +477,62 @@ public class DbOperation implements DbInterface {
 						library.setUser(user);
 						library.setLending(len);
 						list.add(library);
+					}
+					
+				} catch(SQLException e) {
+					e.printStackTrace();
+				} finally {
+					if (ps != null) {
+						try {
+							ps.close();
+						} catch (SQLException e) { e.printStackTrace(); }
+					}
+					if (rs != null) {
+						try {
+							rs.close();
+						} catch (SQLException e) { e.printStackTrace(); }
+					}
+					if (stmt != null) {
+						try {
+							stmt.close();
+						} catch (SQLException e) { e.printStackTrace(); }
+					}
+					if (conn != null) {
+						try {
+							stmt.close();
+						} catch (SQLException e) { e.printStackTrace(); }
+					}
+					if (sql != null) { sql.delete(0, sql.length());}
+				}
+				return list;
+			}
+	 	
+	 	//全図書表示
+		 public ArrayList<Book> AllBooks() {
+				Connection conn = null;
+				Statement stmt = null;
+				ResultSet rs = null;
+				PreparedStatement ps = null;
+				Scanner scanner = new Scanner(System.in);
+				StringBuilder sql = new StringBuilder();
+				ArrayList<Book> list = new ArrayList<>();
+				
+				try {
+					sql.append("SELECT * FROM managebook");
+					// conn にデータベースに接続するために必要な情報を入力する
+					conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+					// SQL ステートメントをデータベースに送信するための SQLServerStatement オブジェクトを作成
+					stmt = conn.createStatement();
+
+					rs = stmt.executeQuery(sql.toString());
+					while(rs.next()) { //データベースに保存されているデータの数だけ繰り返す				
+						Book book = new Book();
+						book.setId(rs.getInt("id"));
+						book.setTitle(rs.getString("title"));
+						book.setAuthor(rs.getString("author"));
+						book.setIsbn(rs.getString("isbn"));
+						book.setNdc(rs.getString("ndc"));
+						list.add(book);
 					}
 					
 				} catch(SQLException e) {

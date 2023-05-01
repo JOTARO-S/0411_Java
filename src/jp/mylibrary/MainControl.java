@@ -19,6 +19,7 @@ class MainControl {
 	            System.out.println("5: 図書のタイトル検索");
 	            System.out.println("6: 図書の著者検索");
 	            System.out.println("7: 貸出期限超過の図書一覧検索");
+	            System.out.println("8: 全表示");
 	            System.out.println("9: 終了");
 	            System.out.println();
 	        	System.out.print("選択肢を入力してください: ");
@@ -83,6 +84,12 @@ class MainControl {
 	            	 */
 
 	            	System.out.println();
+	            	break;
+	            case 8:
+	            	List <Book> bookList = dbo.AllBooks();
+	            	for(Book  data: bookList) {
+	            		data.getBookDataAll();
+	            	}
 	            	break;
 	            case 9:
 	            	System.out.println("終了します。");

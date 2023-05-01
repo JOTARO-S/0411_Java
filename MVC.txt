@@ -1,0 +1,12 @@
+ログイン画面の作成
+
+1, ID&PASS を入力してボタンを押す	View
+2, リクエストを受け取りModelを呼び出す	Controller
+3, ユーザー情報(DB)を取得し、処理結果をControllerへ	Model
+4, 正規のユーザー⇒ダッシュボード、未登録のユーザー⇒ログイン画面	Controller
+5, ダッシュボードが表示される	View
+
+
+Webブラウザを作成する際、目に見える箇所はView、
+データの処理やDBの操作などのビジネスロジックはModel、
+ViewとModelをリクエストによって振り分ける処理をController で実装される。

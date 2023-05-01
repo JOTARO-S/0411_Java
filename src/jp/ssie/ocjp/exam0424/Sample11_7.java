@@ -97,13 +97,13 @@ public class Sample11_7 {
 			oos.writeObject(obj);
 			System.out.println("----- シリアライズ完了");
 			
-			//fis = new FileInputStream(new File("dog.txt"));
+			fis = new FileInputStream(new File("dog.txt"));
 			fis = new FileInputStream(new File("person.txt"));
 			ois = new ObjectInputStream(fis);
-			//Bulldog readObj = (Bulldog) ois.readObject();
-			Person person = (Person) ois.readObject();
-			System.out.println(person.getName());
-			System.out.println(person.getAge());
+			Bulldog readObj = (Bulldog) ois.readObject();
+			//Person person = (Person) ois.readObject();
+			//System.out.println(person.getName());
+			//System.out.println(person.getAge());
 			System.out.println("----- デシリアライズ完了");
 		} catch(ClassNotFoundException e) {
 			System.err.println("クラスファイルがありません");
