@@ -63,8 +63,7 @@ class MainControl {
 	            case 7:
 	            	List <Library> overdueBookList = dbo.OverdueBooks();
 	            	for(Library  data: overdueBookList) {
-	            		data.getBook().getBookDataAll();
-	            		data.getLending().lendingStatus();
+	            		data.getOverdueBookList();
 	            	}
 	            	
 	            	/*

@@ -1,6 +1,7 @@
 package jp.mylibrary;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -469,7 +470,8 @@ public class DbOperation implements DbInterface {
 						user.setName(rs.getString("name"));
 						user.setPhonenumber("phonenumber");
 						user.setAddress(rs.getString("address"));
-						len.setUntilReturn("untilReturn");
+						Date date = Date.valueOf(rs.getString("untilReturn"));
+						len.setUntilReturn(date);
 						
 						library.setBook(book);
 						library.setUser(user);

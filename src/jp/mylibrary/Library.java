@@ -29,4 +29,10 @@ public class Library {
 		this.lending = lending;
 	}
 	
+	void getOverdueBookList() {
+		System.out.printf("期限: %s, ID: %s, タイトル: %s, 著者: %s, 名前: %s, 電話番号 %s, 住所 %s%n ",
+				lending.getUntilReturn(),book.getId(),book.getTitle(),book.getAuthor(),
+				user.getName(),user.getPhonenumber(),user.getAddress());
+	}
+	
 }
